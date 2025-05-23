@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog Komentar</title>
+  <style>
+    #komentar {
+      display: none;
+      margin-top: 10px;
+      padding: 10px;
+      border: 1px solid #ccc;
+    }
+    button {
+      padding: 10px 15px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Artikel Blog</h1>
+  <p>Ini adalah isi artikel blog...</p>
+
+  <button onclick="toggleKomentar()">Tampilkan Komentar</button>
+
+  <div id="komentar">
+    <p><strong>User1:</strong> Artikel ini sangat informatif!</p>
+    <p><strong>User2:</strong> Terima kasih atas tulisannya!</p>
+  </div>
+
+  <script>
+    function toggleKomentar() {
+      var komentar = document.getElementById("komentar");
+      var tombol = document.querySelector("button");
+
+      if (komentar.style.display === "none") {
+        komentar.style.display = "block";
+        tombol.textContent = "Sembunyikan Komentar";
+      } else {
+        komentar.style.display = "none";
+        tombol.textContent = "Tampilkan Komentar";
+      }
+    }
+  </script>
+
+</body>
+</html>
